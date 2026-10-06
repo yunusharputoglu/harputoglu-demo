@@ -3,71 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harputoğlu Orman Ürünleri | Yarım Asırlık Tecrübeyle</title>
+    <title>Harputoğlu Orman Ürünleri | 1968'den Günümüze Güvenle</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-        body { background-color: #f4f6f8; color: #2d3436; }
+        body { background-color: #f8f9fa; color: #2d3436; line-height: 1.6; }
         
         /* Üst Bilgi Barı */
-        .top-bar { background: #111b21; color: #ccc; padding: 8px 5%; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center; }
-        .top-bar a { color: #e1b12c; text-decoration: none; font-weight: 600; margin-left: 15px; }
+        .top-bar { background: #0f172a; color: #cbd5e0; padding: 10px 5%; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .top-bar a { color: #e1b12c; text-decoration: none; font-weight: 600; margin-left: 10px; }
 
         /* Header / Nav */
         header { background: #ffffff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
         .logo-box { display: flex; align-items: center; gap: 12px; }
-        .logo-box img { height: 48px; border-radius: 4px; }
+        /* Logo Yüklediğinde src="logo.png" olarak değiştirebilirsin */
+        .logo-box img { height: 50px; border-radius: 4px; object-fit: contain; }
         .logo-text { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 800; color: #1e392a; letter-spacing: -0.5px; }
         .logo-text span { color: #d4a373; display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; }
 
-        .nav-links a { color: #2d3436; text-decoration: none; margin-left: 25px; font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
+        .nav-links a { color: #2d3436; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
         .nav-links a:hover { color: #d4a373; }
 
         /* Hero / Vitrin */
-        .hero { background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=1200') center/cover; height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px; }
+        .hero { background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=1200') center/cover; height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px; }
         .badge { background: rgba(212, 163, 115, 0.2); border: 1px solid #d4a373; color: #e1b12c; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 800; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.15rem; max-width: 650px; margin-bottom: 30px; color: #e2e8f0; line-height: 1.6; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; }
+        .hero p { font-size: 1.1rem; max-width: 700px; margin-bottom: 30px; color: #e2e8f0; }
         
-        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
-        .btn-primary { background: #d4a373; color: #fff; padding: 14px 32px; text-decoration: none; font-weight: 700; border-radius: 6px; transition: 0.3s; box-shadow: 0 4px 15px rgba(212, 163, 115, 0.4); }
-        .btn-primary:hover { background: #bc8a5f; transform: translateY(-2px); }
-        .btn-wp { background: #25d366; color: white; padding: 14px 32px; text-decoration: none; font-weight: 700; border-radius: 6px; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+        .btn-wp { background: #25d366; color: white; padding: 14px 32px; text-decoration: none; font-weight: 700; border-radius: 6px; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px; font-size: 1rem; }
         .btn-wp:hover { background: #20ba5a; transform: translateY(-2px); }
+
+        /* Tarihçe & Babanların Hikayesi */
+        .history-section { padding: 80px 5%; background: white; }
+        .history-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        /* Babanların Fotoğrafını buraya baba.jpg olarak yükleyeceksin */
+        .history-img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); object-fit: cover; }
+        .history-text h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: #1e392a; margin-bottom: 20px; font-weight: 700; }
+        .history-text p { color: #4a5568; font-size: 0.95rem; margin-bottom: 15px; text-align: justify; }
 
         /* Hizmetler & Ürünler Grid */
         .services { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
         .section-header { text-align: center; margin-bottom: 50px; }
         .section-header h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: #1e392a; font-weight: 700; }
-        .section-header p { color: #636e72; margin-top: 8px; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #edf2f7; display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #edf2f7; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
         .card-img { height: 180px; width: 100%; object-fit: cover; }
-        .card-content { padding: 22px; }
-        .card-content h3 { font-size: 1.25rem; color: #1e392a; margin-bottom: 10px; font-weight: 700; }
-        .card-content p { color: #636e72; font-size: 0.9rem; line-height: 1.5; }
+        .card-content { padding: 20px; }
+        .card-content h3 { font-size: 1.2rem; color: #1e392a; margin-bottom: 10px; font-weight: 700; }
+        .card-content p { color: #636e72; font-size: 0.88rem; }
 
-        /* Markalar / Bayilikler */
-        .brands { background: #ffffff; padding: 50px 5%; text-align: center; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
-        .brand-list { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin-top: 25px; font-weight: 800; font-size: 1.5rem; color: #a0aec0; }
-
-        /* İletişim Alanı */
-        .contact-section { padding: 80px 5%; background: #1e392a; color: white; }
-        .contact-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .contact-info h3 { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 20px; color: #d4a373; }
-        .contact-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
-        .contact-item i { font-size: 1.3rem; color: #d4a373; margin-top: 3px; }
+        /* Şubelerimiz & İletişim */
+        .branches-section { background: #0f172a; color: white; padding: 80px 5%; }
+        .branches-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .branch-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; }
+        .branch-card h3 { color: #d4a373; font-size: 1.4rem; margin-bottom: 15px; font-family: 'Montserrat', sans-serif; border-bottom: 2px solid #d4a373; padding-bottom: 8px; display: inline-block; }
+        .branch-info { margin-bottom: 12px; display: flex; gap: 12px; font-size: 0.95rem; color: #cbd5e0; }
+        .branch-info i { color: #d4a373; margin-top: 4px; }
 
         /* Footer */
-        footer { background: #111b21; color: #718096; text-align: center; padding: 25px; font-size: 0.85rem; border-top: 1px solid #2d3748; }
+        footer { background: #0b0f19; color: #718096; text-align: center; padding: 25px; font-size: 0.85rem; }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.1rem; }
-            header { flex-direction: column; gap: 15px; text-align: center; }
-            .nav-links a { margin: 0 10px; font-size: 0.85rem; }
+        @media (max-width: 900px) {
+            .history-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -75,9 +76,9 @@
 
     <!-- Üst Bilgi Barı -->
     <div class="top-bar">
-        <div><i class="fas fa-map-marker-alt"></i> Yalova Sanayi Mahallesi, 2. Yol Sok. No:47, Merkez/Yalova</div>
+        <div><i class="fas fa-envelope"></i> harputoglu@harputoglu.com</div>
         <div>
-            <i class="fas fa-phone"></i> 0 (226) 825 36 40
+            <i class="fas fa-phone"></i> Sanayi: 0 (226) 825 36 40 | Merkez: 0 (226) 814 72 91
             <a href="https://wa.me/905308346177" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </div>
@@ -85,126 +86,132 @@
     <!-- Header -->
     <header>
         <div class="logo-box">
-            <!-- Gerçek Logoyu Eklemek İçin src Kısmını Değiştirebilirsin -->
+            <!-- Gerçek logoyu repona ekleyince src="logo.png" yazarsın -->
             <img src="https://harputoglu.com/wp-content/uploads/2021/04/harputoglu-logo.png" alt="Harputoğlu Logo" onerror="this.style.display='none'">
             <div class="logo-text">
                 HARPUTOĞLU
-                <span>ORMAN ÜRÜNLERİ</span>
+                <span>ORMAN ÜRÜNLERİ LTD. ŞTİ.</span>
             </div>
         </div>
         <div class="nav-links">
-            <a href="#kurumsal">Hakkımızda</a>
-            <a href="#urunler">Ürünler & Hizmetler</a>
-            <a href="#bayilikler">Bayiliklerimiz</a>
-            <a href="#iletisim">İletişim</a>
+            <a href="#tarihce">Tarihçemiz</a>
+            <a href="#urunler">Ürün & Hizmetler</a>
+            <a href="#subeler">Şubelerimiz</a>
         </div>
     </header>
 
     <!-- Hero / Vitrin -->
     <section class="hero">
-        <div class="badge">Yarım Asırlık Tecrübe ve Güven</div>
-        <h1>Ahşap & Mobilya Malzemelerinde Çözüm Ortağınız</h1>
-        <p>Sunta, MDF, Panel Ebatlama, Kenar Bantlama, Teka Ankastre ve Mobilya Hırdavatında Yalova'nın Lider Tedarikçisi.</p>
-        <div class="hero-btns">
-            <a href="https://wa.me/905308346177?text=Merhaba,%20panel%20ebatlama%20fiyat%20teklifi%20almak%20istiyorum." class="btn-wp" target="_blank">
-                <i class="fab fa-whatsapp"></i> Ebatlama & Fiyat Teklifi Al
-            </a>
-            <a href="#urunler" class="btn-primary">Ürünleri İncele</a>
+        <div class="badge">1968'den Günümüze Yarım Asırlık Tecrübe</div>
+        <h1>İlkeli Ticaret, Sarsılmaz Güven</h1>
+        <p>Sunta, MDF, Mutfak & Banyo Aksesuarları, Ankastre Ürünler ve Panel Ebatlama Hizmetlerinde Yalova'da Sektörün Lideri.</p>
+        <a href="https://wa.me/905308346177?text=Merhaba,%20ürünleriniz%20ve%20fiyatlar%20hakkında%20bilgi%20almak%20istiyorum." class="btn-wp" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Hizmet Hattı
+        </a>
+    </section>
+
+    <!-- Tarihçe & Babanların Hikayesi -->
+    <section class="history-section" id="tarihce">
+        <div class="history-container">
+            <!-- Babanların Fotoğrafı (repona baba.jpg adıyla atıp src="baba.jpg" yapabilirsin) -->
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600" class="history-img" alt="Harputoğlu Ailesi ve Kurucularımız">
+            
+            <div class="history-text">
+                <h2>Köklerimizden Geleceğe</h2>
+                <p>Temeli merhum babamız <strong>Hasan Harputoğlu</strong> tarafından 1968 yılında Trabzon Merkez’de <em>“İsviçre Saat Galerisi”</em> ismiyle saat satış ve tamirciliği yaparak başlayan ticari geçmişimiz, 1973 yılında Yalova’ya taşınmasından bugüne kadar ilkeli duruşuyla devam etmektedir.</p>
+                <p>1987 yılında, merhum dedemiz <strong>Hacı Rızvan Efendi’nin</strong> eski bir mobilya sanatkârı olmasının da etkisi ile ticaretimize ahşap kaplama, sunta ve MDF ürünleri ilave edilmiştir.</p>
+                <p>1996 yılında şirketleşerek <strong>Harputoğlu Orman Ürünleri Ltd. Şti.</strong> unvanını alan firmamız; Abdullah, Adem, Ahmet ve Necmettin Harputoğlu kardeşlerin ortaklığı ile büyümeye devam etmektedir.</p>
+                <p>Günümüzde dört kardeş-dört ortak olarak sunta, MDF, mobilya ve banyo aksesuarları ile ankastre ürünlerde sektörün en saygın markalarının Yalova bayiliğini ve pazarlamasını gururla sürdürüyoruz.</p>
+            </div>
         </div>
     </section>
 
     <!-- Ürünler ve Hizmetler -->
     <section class="services" id="urunler">
         <div class="section-header">
-            <h2>Hizmetlerimiz ve Ürün Gruplarımız</h2>
-            <p>Mobilya üreticileri, mimarlar ve marangozlar için A'dan Z'ye profesyonel çözümler.</p>
+            <h2>Ürün Gruplarımız & Hizmetlerimiz</h2>
+            <p>Mobilya üreticileri ve perakende müşterilerimiz için zengin ürün yelpazesi.</p>
         </div>
         <div class="grid">
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=500" class="card-img" alt="Sunta MDF">
                 <div class="card-content">
                     <h3>Sunta & MDF Plakalar</h3>
-                    <p>Suntalam, Mdflam, Kontraplak ve ham MDF gruplarında zengin renk ve doku seçenekleri.</p>
+                    <p>Suntalam, Mdflam ve düz plaka grubunda saygın markaların zengin renk seçenekleri.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500" class="card-img" alt="Panel Ebatlama">
                 <div class="card-content">
                     <h3>Panel Ebatlama & Kenar Bantlama</h3>
-                    <p>Verdiğiniz özel ölçülere göre milimetrik hassasiyetle kesim ve kaliteli PVC kenar bantlama işlemi.</p>
+                    <p>Özel projeleriniz için milimetrik hassasiyetle kesim ve kaliteli PVC kenar bantlama servisi.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500" class="card-img" alt="Ankastre">
                 <div class="card-content">
-                    <h3>Ankastre Mutfak Setleri</h3>
-                    <p>Teka başta olmak üzere seçkin markaların ankastre ocak, fırın, davlumbaz ve evye çözümleri.</p>
+                    <h3>Ankastre Ürünler</h3>
+                    <p>Mutfaklarınız için modern, şık ve garantili ankastre ocak, fırın ve davlumbaz çözümleri.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=500" class="card-img" alt="Mobilya Hırdavat">
+                <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=500" class="card-img" alt="Mobilya Aksesuarları">
                 <div class="card-content">
-                    <h3>Mobilya Hırdavatı & Aksesuar</h3>
-                    <p>Çebi ve Samet bayiliklerimizle kapı kolları, kulp, menteşe, çekmece rayı ve tüm aksesuarlar.</p>
+                    <h3>Mobilya & Banyo Aksesuarları</h3>
+                    <p>Her çeşit kulplar, menteşeler, ray sistemleri ve banyo-mutfak hırdavat aksesuarları.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Markalar -->
-    <section class="brands" id="bayilikler">
-        <p style="font-weight: 600; color: #718096; letter-spacing: 1px;">GÜVENİLİR MARKA BAYİLİKLERİMİZ</p>
-        <div class="brand-list">
-            <span>TEKA</span>
-            <span>SAMET</span>
-            <span>ÇEBİ</span>
-            <span>AGT</span>
-            <span>KASTAMONU ENTEGRE</span>
+    <!-- Şubelerimiz & İletişim -->
+    <section class="branches-section" id="subeler">
+        <div class="section-header" style="color: white;">
+            <h2 style="color: white;">İletişim & Şubelerimiz</h2>
+            <p style="color: #cbd5e0;">İhtiyaçlarınız için bize şubelerimizden veya WhatsApp hattımızdan ulaşabilirsiniz.</p>
         </div>
-    </section>
-
-    <!-- İletişim -->
-    <section class="contact-section" id="iletisim">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Bizimle İletişime Geçin</h3>
-                <p style="margin-bottom: 25px; color: #cbd5e0;">Projeniz, ebatlama siparişleriniz veya ürün tedariği için bize dilediğiniz zaman ulaşabilirsiniz.</p>
-                <div class="contact-item">
+        <div class="branches-container">
+            
+            <!-- Merkez Bayi -->
+            <div class="branch-card">
+                <h3>Merkez Bayimiz</h3>
+                <div class="branch-info">
                     <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <strong>Adres:</strong><br>
-                        Sanayi Mah., 2. Yol Sok., No:47, Merkez / YALOVA
-                    </div>
+                    <div>Süleymanbey Mahallesi, Arabacılar Sokak, No:22/A Merkez / YALOVA</div>
                 </div>
-                <div class="contact-item">
+                <div class="branch-info">
                     <i class="fas fa-phone"></i>
-                    <div>
-                        <strong>Telefon:</strong><br>
-                        0 (226) 825 36 40
-                    </div>
+                    <div>0 (226) 814 72 91</div>
                 </div>
-                <div class="contact-item">
+                <div class="branch-info">
+                    <i class="fas fa-envelope"></i>
+                    <div>harputoglu@harputoglu.com</div>
+                </div>
+            </div>
+
+            <!-- Sanayi Bayi -->
+            <div class="branch-card">
+                <h3>Sanayi Bayimiz</h3>
+                <div class="branch-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>Kirazlı Sanayi Sitesi, Marangozlar Bölümü, No:47 Merkez / YALOVA</div>
+                </div>
+                <div class="branch-info">
+                    <i class="fas fa-phone"></i>
+                    <div>0 (226) 825 36 40</div>
+                </div>
+                <div class="branch-info">
                     <i class="fab fa-whatsapp"></i>
-                    <div>
-                        <strong>WhatsApp Destek:</strong><br>
-                        0 (530) 834 61 77
-                    </div>
+                    <div>+90 530 834 61 77</div>
                 </div>
             </div>
-            <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="font-size: 1.3rem; margin-bottom: 15px; color: #d4a373;">Çalışma Saatlerimiz</h4>
-                <p style="margin-bottom: 10px;">Hafta İçi: 08:30 - 18:30</p>
-                <p style="margin-bottom: 20px;">Cumartesi: 08:30 - 15:00</p>
-                <a href="https://wa.me/905308346177" class="btn-wp" style="justify-content: center; width: 100%; text-align: center;" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Doğrudan WhatsApp'tan Yazın
-                </a>
-            </div>
+
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Harputoğlu Orman Ürünleri. Tüm Hakları Saklıdır.</p>
+        <p>&copy; 2026 Harputoğlu Orman Ürünleri Ltd. Şti. Tüm Hakları Saklıdır.</p>
     </footer>
 
 </body>
